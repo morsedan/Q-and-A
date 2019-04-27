@@ -2,18 +2,17 @@
 //  QuestionController.swift
 //  Q-and-A
 //
-//  Created by morse on 4/25/19.
+//  Created by morse on 4/27/19.
 //  Copyright © 2019 morse. All rights reserved.
 //
 
 import Foundation
 
 class QuestionController {
-    
     var questions: [Question] = []
     
-    func createQuestion(withText text: String, andAsker asker: String) {
-        let question = Question(question: text, asker: asker)
+    func createQuestion(questionText: String, asker: String) {
+        let question = Question(questionText: questionText, asker: asker)
         
         questions.append(question)
     }
@@ -25,11 +24,9 @@ class QuestionController {
             questions[questionIndex].answer = answer
             questions[questionIndex].answerer = answerer
         }
-        
     }
     
-    func deleteQuestion(_ question: Question) {
-        
+    func  deleteQuestion(_ question: Question) {
         if let questionIndex = questions.firstIndex(of: question) {
             questions.remove(at: questionIndex)
         }

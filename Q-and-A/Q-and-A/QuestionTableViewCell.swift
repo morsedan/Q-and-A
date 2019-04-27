@@ -1,8 +1,8 @@
 //
-//  QuestionCellTableViewCell.swift
+//  QuestionTableViewCell.swift
 //  Q-and-A
 //
-//  Created by morse on 4/25/19.
+//  Created by morse on 4/27/19.
 //  Copyright © 2019 morse. All rights reserved.
 //
 
@@ -10,6 +10,10 @@ import UIKit
 
 class QuestionTableViewCell: UITableViewCell {
 
+    @IBOutlet var answerThisLabel: UILabel!
+    @IBOutlet var askedByLabel: UILabel!
+    @IBOutlet var questionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,6 +25,4 @@ class QuestionTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    @IBOutlet var askedByLabel: UILabel!
-    @IBOutlet var qustionLabel: UILabel!
 }
