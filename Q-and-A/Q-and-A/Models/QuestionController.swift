@@ -12,6 +12,7 @@ class QuestionController {
     var questions: [Question] = []
     
     func createQuestion(questionText: String, asker: String) {
+        
         let question = Question(questionText: questionText, asker: asker)
         
         questions.append(question)
@@ -28,6 +29,7 @@ class QuestionController {
     
     func  deleteQuestion(_ question: Question) {
         if let questionIndex = questions.firstIndex(of: question) {
+            
             questions.remove(at: questionIndex)
         }
     }
